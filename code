@@ -1,0 +1,77 @@
+//Code for main menu
+
+using Godot;
+using System;
+
+public partial class main_menu : Node2D
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+	private void _on_help_button_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://login_page.tscn");
+	}
+	private void _on_worker_button_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://leaderboard.tscn");
+	}
+	
+}
+
+// code for login
+
+using Godot;
+using System;
+
+public partial class login_page : Node2D
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+	private void _on_return_button_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://main_menu.tscn");
+	}
+	private void _on_enter_button_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://waiting_list.tscn");
+	}
+}
+
+//code for priority queue
+
+using Godot;
+using System;
+
+public partial class leaderboard : Node2D
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+	
+	private void _on_back_button_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://main_menu.tscn");
+	}
+
+}
+
